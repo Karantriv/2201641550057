@@ -1,14 +1,14 @@
-# URL Shortener Microservice
+# URL Shortener Microservice - Campus Evaluation Project
 
 **Student ID:** 2201641550057  
 **Developer:** Karan Trivedi  
 **Submission Date:** September 2025
 
-## Project Overview
+## 🚀 Project Overview
 
 This repository showcases a comprehensive URL shortening microservice built with Node.js and Express.js, featuring advanced logging capabilities and real-time analytics tracking. The project demonstrates modern backend development practices with clean architecture and robust error handling.
 
-##  Repository Structure
+## 📁 Repository Structure
 
 ```
 ├── Backend Test Submission/     # Main URL shortener service
@@ -21,7 +21,7 @@ This repository showcases a comprehensive URL shortening microservice built with
     └── package.json            # Package configuration
 ```
 
-##  Quick Start Guide
+## ⚡ Quick Start Guide
 
 ### Prerequisites
 
@@ -54,7 +54,7 @@ This repository showcases a comprehensive URL shortening microservice built with
    - Server will start on `http://localhost:3000`
    - Check console for startup confirmation
 
-## Core Features
+## 🎯 Core Features
 
 ### URL Management
 
@@ -77,7 +77,7 @@ This repository showcases a comprehensive URL shortening microservice built with
 - **Comprehensive Logging**: Integration with external evaluation service
 - **Error Resilience**: Robust error handling with appropriate HTTP status codes
 
-##  Technical Implementation
+## 🔧 Technical Implementation
 
 ### Technology Stack
 
@@ -100,14 +100,14 @@ This repository showcases a comprehensive URL shortening microservice built with
 - Input sanitization and type checking
 - Expiration-based access control
 
-##  Performance Characteristics
+## 📊 Performance Characteristics
 
 - **Response Time**: Sub-millisecond URL lookups via Map storage
 - **Concurrency**: Handles multiple simultaneous requests efficiently
 - **Memory Usage**: Optimized in-memory data structures
 - **Scalability**: Stateless design enables horizontal scaling
 
-##  Development Notes
+## 🛠️ Development Notes
 
 ### Code Organization
 
@@ -125,7 +125,7 @@ The codebase follows a layered architecture pattern:
 - Detailed error logging for debugging
 - User-friendly error messages
 
-##  Future Enhancements
+## 📈 Future Enhancements
 
 - Database integration for persistent storage
 - Rate limiting and abuse prevention
