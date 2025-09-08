@@ -1,4 +1,4 @@
- Karan Agnihotri (2201641550057)
+ Karan Trivedi (2201641550057)
 
 ## Project Structure
 
