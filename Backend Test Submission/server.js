@@ -1,12 +1,20 @@
+// ========================================
+// DEPENDENCIES AND CONFIGURATION
+// ========================================
+
 // Core dependencies for building our URL shortening microservice
 const express = require('express');
 const cors = require('cors');
 const { Log } = require('./logger');
 const { createShortUrl, getUrlByShortcode, recordClick, getUrlStats } = require('./urlService');
 
-// Initialize Express application with standard port configuration
+// Application configuration constants
+const PORT = 3000;
 const app = express();
-const PORT = 3001;
+
+// ========================================
+// MIDDLEWARE SETUP
+// ========================================
 
 // Enable cross-origin requests and JSON parsing for API endpoints
 app.use(cors());
@@ -17,6 +25,10 @@ app.use((req, res, next) => {
     Log('backend', 'info', 'middleware', `${req.method} ${req.path} - incoming request`);
     next();
 });
+
+// ========================================
+// API ROUTE HANDLERS
+// ========================================
 
 // Primary endpoint for creating shortened URLs with optional custom parameters
 app.post('/shorturls', async (req, res) => {
@@ -126,6 +138,10 @@ app.get('/:shortcode', async (req, res) => {
     }
 });
 
+// ========================================
+// ERROR HANDLING MIDDLEWARE
+// ========================================
+
 // Catch-all middleware for handling requests to undefined routes
 app.use((req, res) => {
     Log('backend', 'warn', 'handler', `route not found: ${req.method} ${req.path}`);
@@ -141,6 +157,10 @@ app.use((error, req, res, next) => {
         error: 'Internal server error'
     });
 });
+
+// ========================================
+// SERVER INITIALIZATION
+// ========================================
 
 // Start the HTTP server and begin listening for incoming connections
 app.listen(PORT, () => {
